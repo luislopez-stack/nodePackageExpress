@@ -1,0 +1,15 @@
+{
+  "name": "nodeproyectosumy",
+  "version": "1.0.0",
+  "description": "Creacion de servicio web con Node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Luis",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

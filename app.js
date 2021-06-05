@@ -1,6 +1,7 @@
 const express = require('express')
+require('dotenv').config();
 const app = express()
-const port = 3000;
+const port = process.env.PORT;
 
 
 //SERVIR CONTENIDO ESTATICO
@@ -13,3 +14,17 @@ app.get('/', function(req, res) {
 app.listen(port, () => {
     console.log(`App escucha localhost:${port}`)
 });
+
+
+////SERVIDOR DINAMICO EXPRESS
+app.get('/generic', (req, res) => {
+    res.sendFile(__dirname + '/public/generic.html');
+})
+
+app.get('/elements', (req, res) => {
+    res.sendFile(__dirname + '/public/elements.html');
+})
+
+app.get('/index', (req, res) => {
+    res.sendFile(__dirname + '/public/index.html');
+})
